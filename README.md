@@ -1,12 +1,38 @@
 # sec-toolkit
 
-A curated reference of open-source and freely available security tools, organized by phase of a security engagement. Offense and defense. Written for practitioners, by a practitioner.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Link Check](https://github.com/Bimpebabs/sec-toolkit/workflows/Link%20Check/badge.svg)](https://github.com/Bimpebabs/sec-toolkit/actions/workflows/link-check.yml)
+[![Staleness Check](https://github.com/Bimpebabs/sec-toolkit/workflows/Staleness%20Check/badge.svg)](https://github.com/Bimpebabs/sec-toolkit/actions/workflows/staleness-check.yml)
+[![Last Commit](https://img.shields.io/github/last-commit/Bimpebabs/sec-toolkit)](https://github.com/Bimpebabs/sec-toolkit/commits/main)
 
-**Scope.** Tools you'd reach for during authorized work: penetration tests, red-team engagements, purple-team exercises, security assessments, and incident response. Defensive tooling is included because modern engagements are rarely offense-only.
+> A curated reference of open-source security tools, organized by phase of an engagement. Offense and defense. Written for practitioners, by a practitioner.
+
+**Why this list exists.** Most security tool lists are either offense-only or a flat dump of links with no context. This one covers the full engagement lifecycle — recon through detection engineering — and every entry has a one-line "when to reach for it" note from real use. If you're a practitioner looking for the right tool for the job, this list is built for you.
+
+**Scope.** Tools you'd reach for during authorized work: penetration tests, red-team engagements, purple-team exercises, security assessments, and incident response. Defensive tooling is first-class because modern engagements are rarely offense-only.
 
 **Not included.** Commercial-only tools, tools with no public source or distribution, anything primarily malicious in intent. Dual-use tools are included with context.
 
-Every entry has a "when to reach for it" note — the practitioner's take, not marketing copy.
+---
+
+## Quick start
+
+New here? These are the tools I'd install first on a fresh machine.
+
+| Phase | Tool | Why |
+|---|---|---|
+| Recon | [Subfinder](https://github.com/projectdiscovery/subfinder) | Passive subdomain discovery — first thing to run on any engagement |
+| Recon | [httpx](https://github.com/projectdiscovery/httpx) | Validate which subdomains are actually live |
+| Web | [Burp Suite Community](https://portswigger.net/burp/communitydownload) | The standard web proxy — free tier covers most manual work |
+| Web | [Nuclei](https://github.com/projectdiscovery/nuclei) | Template-based scanning at scale |
+| AD | [BloodHound](https://github.com/SpecterOps/BloodHound) | AD attack path analysis — the single most important AD tool |
+| AD | [NetExec](https://github.com/Pennyw0rth/NetExec) | Network execution — the maintained successor to CrackMapExec |
+| Container | [Trivy](https://github.com/aquasecurity/trivy) | Container and IaC scanning — runs in CI |
+| AI | [Garak](https://github.com/NVIDIA/garak) | LLM vulnerability scanner — the standard for probing models |
+| Supply chain | [Syft](https://github.com/anchore/syft) + [Grype](https://github.com/anchore/grype) | SBOM generation and vulnerability scanning |
+| Detection | [Sigma](https://github.com/SigmaHQ/sigma) | Detection-as-code — the standard format |
+
+---
 
 ## Contents
 
@@ -279,8 +305,8 @@ Every entry has a "when to reach for it" note — the practitioner's take, not m
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Found a broken link? Know a tool that belongs here? See [CONTRIBUTING.md](CONTRIBUTING.md) — it takes about two minutes to open an issue or a PR.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+[MIT](LICENSE) — use it, fork it, build on it.
