@@ -10,7 +10,7 @@ If you notice a link in this list that now points to:
 - A repository that has been replaced with malware
 - A download that serves different content than what the entry describes
 
-Please report it by opening a private issue or emailing **b.babsalaam@gmail.com** directly. Do not open a public issue for actively malicious links — that just spreads the bad link further.
+Please report it by [opening an issue](https://github.com/Bimpebabs/sec-toolkit/issues/new?template=broken-link.md) with the "Broken link / outdated entry" template. Include the entry name and what you observed.
 
 I will remove or replace the link within 48 hours of a credible report.
 
@@ -22,4 +22,4 @@ I will remove or replace the link within 48 hours of a credible report.
 
 ## Responsible use
 
-Every tool on this list is provided for use in **authorized** security work only: penetration tests with a signed contract, red-team engagements with written authorization, security research in controlled environments, and defensive operations on systems you own or administer. Using any of these tools against systems you do not have explicit permission to test is illegal in most jurisdictions, and I do not condone it.
+Every tool on this list is provided for use in authorized security work only: penetration tests with a signed contract, red-team engagements with written authorization, security research in controlled environments, and defensive operations on systems you own or administer. Using any of these tools against systems you do not have explicit permission to test is illegal in most jurisdictions, and I do not condone it.
