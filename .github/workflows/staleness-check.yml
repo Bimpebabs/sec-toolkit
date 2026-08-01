@@ -1,0 +1,29 @@
+name: Staleness Check
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'  # Mondays at 07:00 UTC
+  workflow_dispatch:
+
+jobs:
+  staleness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for stale tools
+        run: |
+          python3 tools/staleness-check.py README.md > staleness-report.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create issue if stale tools found
+        if: ${{ hashFiles('staleness-report.md') != '' }}
+        uses: actions-ecosystem/action-create-issue@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Staleness report: tools with no commits in 12+ months"
+          body: |
+            The weekly staleness check found tools that haven't had a commit in over 12 months.
+            See `staleness-report.md` in the [workflow artifacts](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}).
+          labels: staleness, automated
