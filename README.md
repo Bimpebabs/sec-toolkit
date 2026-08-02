@@ -50,6 +50,7 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 - [Detection Engineering & DFIR](#detection-engineering--dfir)
 - [Reporting & Collaboration](#reporting--collaboration)
 - [Distributions & Cyber Ranges](#distributions--cyber-ranges)
+- [Archived but Useful](#archived-but-useful)
 
 ---
 
@@ -66,7 +67,6 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 | [katana](https://github.com/projectdiscovery/katana) | Web crawler with headless-browser support. | Better than `gau` for modern JS-heavy apps. |
 | [gau](https://github.com/lc/gau) | Fetch known URLs from AlienVault, Wayback Machine, Common Crawl. | Quick historical URL discovery. |
 | [waybackurls](https://github.com/tomnomnom/waybackurls) | Wayback Machine URL fetcher. | Lightweight alternative to gau. |
-| [Sublist3r](https://github.com/aboul3la/Sublist3r) | Subdomain enumeration via search engines. | *Unmaintained since 2020. Still works as a second source.* |
 
 ### Port scanning
 
@@ -118,9 +118,7 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 | Tool | Description | When to reach for it |
 |---|---|---|
 | [dalfox](https://github.com/hahwul/dalfox) | Automated XSS scanner with parameter analysis. | Best-in-class for XSS discovery. |
-| [XSStrike](https://github.com/s0md3v/XSStrike) | XSS detection suite with WAF bypass. | *Unmaintained since 2021. Still useful for manual testing.* |
 | [sqlmap](https://github.com/sqlmapproject/sqlmap) | Automated SQL injection. | The standard for confirmed SQLi exploitation. |
-| [NoSQLMap](https://github.com/codingo/NoSQLMap) | NoSQL injection testing. | *Unmaintained since 2021. Still the only serious NoSQL injection tool.* |
 
 ### API testing
 
@@ -162,7 +160,6 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 | Tool | Description | When to reach for it |
 |---|---|---|
 | [sqlmap](https://github.com/sqlmapproject/sqlmap) | Automated SQL injection. | See Web Application Security. |
-| [NoSQLMap](https://github.com/codingo/NoSQLMap) | NoSQL injection testing. | See Web Application Security. |
 
 ---
 
@@ -179,6 +176,9 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 | [Impacket](https://github.com/fortra/impacket) | Network protocol toolkit. | Foundation library for most AD attacks. |
 | [Responder](https://github.com/lgandx/Responder) | LLMNR/NBT-NS/MDNS poisoner. | First tool to run on an internal network. |
 | [Mimikatz](https://github.com/gentilkiwi/mimikatz) | Credential extraction. | *Reference only. Use with extreme caution and only in authorized engagements.* |
+
+### Password attacks
+
 
 ### Password attacks
 
@@ -209,7 +209,7 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 |---|---|---|
 | [PEASS-ng](https://github.com/peass-ng/PEASS-ng) | Privilege escalation scripts (WinPEAS, LinPEAS). | First tool to run after initial access. |
 | [PowerUp](https://github.com/PowerShellMafia/PowerSploit) | Windows privilege escalation. | Part of PowerSploit. |
-| [LinEnum](https://github.com/rebootuser/LinEnum) | Linux enumeration script. | *Unmaintained since 2019. Still useful as a checklist.* |
+| [LinEnum](https://github.com/rebootuser/LinEnum) | Linux enumeration script. | See [Archived but useful](#archived-but-useful). |
 
 ### Tunneling & exfiltration
 
@@ -354,6 +354,19 @@ New here? These are the tools I'd install first on a fresh machine for penetrati
 | [GOAD](https://github.com/Orange-Cyberdefense/GOAD) | Game of Active Directory. | Practice lab for AD attacks. |
 | [DetectionLab](https://github.com/clong/DetectionLab) | Windows-based detection lab. | Practice defensive tooling. |
 | [PurpleTeamCloud](https://github.com/chvancooten/PurpleTeamCloud) | Cloud-based purple team lab. | Cloud-native practice. |
+
+---
+
+## Archived but useful
+
+Tools that are no longer actively maintained but still work and are worth knowing about. Use them with the understanding that they may break without warning.
+
+| Tool | Description | When to reach for it |
+|---|---|---|
+| [Sublist3r](https://github.com/aboul3la/Sublist3r) | Subdomain enumeration via search engines. | Second source for subdomain discovery. Unmaintained since 2020. |
+| [XSStrike](https://github.com/s0md3v/XSStrike) | XSS detection suite with WAF bypass. | Manual XSS testing. Unmaintained since 2021. |
+| [NoSQLMap](https://github.com/codingo/NoSQLMap) | NoSQL injection testing. | The only serious NoSQL injection tool. Unmaintained since 2021. |
+| [LinEnum](https://github.com/rebootuser/LinEnum) | Linux enumeration script. | Checklist for Linux privilege escalation. Unmaintained since 2019. |
 
 ---
 
